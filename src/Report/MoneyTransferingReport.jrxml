@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1061" pageHeight="792" columnWidth="1021" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cf2d814-7dbe-42f7-bcbf-6003d9b8498d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transfering.`fullname` AS transfering_fullname,
+     transfering.`recieveraccount` AS transfering_recieveraccount,
+     transfering.`senderaccount` AS transfering_senderaccount,
+     transfering.`transferdate` AS transfering_transferdate,
+     transfering.`Amount` AS transfering_Amount
+FROM
+     `transfering` transfering]]>
+	</queryString>
+	<field name="transfering_fullname" class="java.lang.String"/>
+	<field name="transfering_recieveraccount" class="java.lang.Integer"/>
+	<field name="transfering_senderaccount" class="java.lang.Integer"/>
+	<field name="transfering_transferdate" class="java.sql.Date"/>
+	<field name="transfering_Amount" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="0" width="548" height="36" uuid="6d722c60-9080-4031-a512-1130dd392ea6"/>
+				<textElement>
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[Well Come To Comercial Bank Of Ethiopia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="47" width="492" height="32" uuid="54e35d49-0487-4849-907c-035a903376d3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[MoneyTransferingReport]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="164" height="20" uuid="24ed1da4-f531-42d8-bab5-4bda0f5b1527"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[transfering_fullname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="2" width="203" height="20" uuid="e735acf8-fe2b-4098-82c8-7ba8cfcec7e4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[transfering_recieveraccount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="2" width="201" height="20" uuid="9bf95096-f9b3-4c1a-9a46-b1caed21e43b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[transfering_senderaccount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="633" y="2" width="196" height="20" uuid="de2e4cde-fc47-4e60-ba9d-5df8c9513689"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[transfering_transferdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="850" y="2" width="148" height="20" uuid="30ba1649-b7ee-4af5-a184-a6e74fc4b622"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[transfering_Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9b53071c-8a2f-4438-9687-eca925d7edc3"/>
+				<textFieldExpression><![CDATA[$F{transfering_fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="100" height="20" uuid="5c2dc1b1-060b-4854-9d72-79b9fdfc1b0e"/>
+				<textFieldExpression><![CDATA[$F{transfering_recieveraccount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="0" width="100" height="20" uuid="da112c23-1276-4b22-aa18-f0be8c865caa"/>
+				<textFieldExpression><![CDATA[$F{transfering_senderaccount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="633" y="0" width="100" height="20" uuid="1bb227ff-3d11-433f-8fad-5a81d48a784f"/>
+				<textFieldExpression><![CDATA[$F{transfering_transferdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="850" y="0" width="100" height="20" uuid="a6eacbd8-ac20-4caf-b545-0364f0aa863d"/>
+				<textFieldExpression><![CDATA[$F{transfering_Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

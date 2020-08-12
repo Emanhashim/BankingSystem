@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1158" pageHeight="792" columnWidth="1118" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="841c2442-7ecb-4465-b2f5-625880031a85">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="483"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     employee.`Employee_ID` AS employee_Employee_ID,
+     employee.`First_Name` AS employee_First_Name,
+     employee.`Last_Name` AS employee_Last_Name,
+     employee.`sex` AS employee_sex,
+     employee.`Address` AS employee_Address,
+     employee.`Phone_Number` AS employee_Phone_Number
+FROM
+     `employee` employee]]>
+	</queryString>
+	<field name="employee_Employee_ID" class="java.lang.String"/>
+	<field name="employee_First_Name" class="java.lang.String"/>
+	<field name="employee_Last_Name" class="java.lang.String"/>
+	<field name="employee_sex" class="java.lang.String"/>
+	<field name="employee_Address" class="java.lang.String"/>
+	<field name="employee_Phone_Number" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="278" y="0" width="527" height="42" forecolor="#5C1AE7" uuid="a8eb74c8-d77a-444f-9e96-e93a10c1fbd6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Well Come To Comercial Bank Of Ethiopia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="42" width="437" height="54" uuid="7d579ace-1dd7-4752-b71f-451bcf944140"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EmployeeListReport]]></text>
+			</staticText>
+			<image>
+				<reportElement x="871" y="0" width="247" height="96" uuid="8ebdd5aa-7ac3-45e5-8dce-b566f0f9465b"/>
+				<imageExpression><![CDATA["/home/zol/Desktop/StudentInformationSystemLinux05162015/src/sis/images/splash.gif"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="27" y="0" width="171" height="104" uuid="d035307d-fa3b-447f-8970-f7720ddcce01"/>
+				<imageExpression><![CDATA["/home/zol/Desktop/StudentInformationSystemLinux05162015/src/sis/images/splash.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="57" y="2" width="182" height="20" uuid="308ba514-60c8-488b-b965-9989bb15e540"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_Employee_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="2" width="175" height="20" uuid="caaff43b-f4e8-4964-b702-380f32418cac"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_First_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="2" width="159" height="20" uuid="222c3516-2314-429a-a2ed-5a1191942f13"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_Last_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="2" width="128" height="20" uuid="18775b61-b288-48ff-9792-cf56c4c18985"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_sex]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="794" y="2" width="138" height="20" uuid="4e209f3e-98aa-4ec3-96eb-239766ff6069"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="943" y="2" width="175" height="20" uuid="d0a2010f-0d9a-45d5-a85c-6ed73c501bdc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[employee_Phone_Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="57" y="0" width="100" height="20" uuid="0584140a-abbf-432a-8b81-f1a394063037"/>
+				<textFieldExpression><![CDATA[$F{employee_Employee_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="0" width="100" height="20" uuid="c32a3b37-0b1f-4322-a2e7-325fbbeb72c7"/>
+				<textFieldExpression><![CDATA[$F{employee_First_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="0" width="100" height="20" uuid="80f4cb6d-f319-4899-84c5-6df5f503c2cc"/>
+				<textFieldExpression><![CDATA[$F{employee_Last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="665" y="0" width="100" height="20" uuid="ec3f4110-31ef-404b-9d87-6949c96473a6"/>
+				<textFieldExpression><![CDATA[$F{employee_sex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="832" y="0" width="100" height="20" uuid="906ceca8-6ade-4dd7-a557-0e69e36e749a"/>
+				<textFieldExpression><![CDATA[$F{employee_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="979" y="0" width="100" height="20" uuid="6febcac7-f17b-425d-ad19-6b1dd4e91a44"/>
+				<textFieldExpression><![CDATA[$F{employee_Phone_Number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
